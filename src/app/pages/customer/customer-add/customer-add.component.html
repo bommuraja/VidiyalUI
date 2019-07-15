@@ -1,0 +1,297 @@
+<div>
+    <h2>Add Customer </h2>  
+    <div class="row">
+          <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+              <b><label class="control-label">CustomerID </label></b>
+          </div>
+          <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+              <input class="form-control" [(ngModel)]="customerData.CustomerID" placeholder="CustomerID" disabled/>
+          </div>
+          <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+              <b><label class="control-label required">Location Name </label></b>
+          </div>
+          <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+            <select (change)="customerData.CenterID=($event.target.value)" [(ngModel)]="customerData.CenterID">
+                <option value="0">--All--</option>
+                <option *ngFor="let center of customerData.CenterList" value={{center.CenterID}}>
+                    {{center.CenterName}}
+                </option>
+            </select>
+          </div>
+    </div>  
+    <div class="row">
+        <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+            <b><label class="control-label required">Customer Name </label></b>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+            <input class="form-control" [(ngModel)]="customerData.CustomerName" placeholder="CustomerName" />
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+            <b><label class="control-label required">Date of Birth </label></b>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+            <input class="form-control" type="date" [(ngModel)]="customerData.YearOfBirth" placeholder="YearOfBirth" />
+        </div>
+  </div>  
+
+  <div class="row">
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label required">Joining Date </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+        <input class="form-control" type="date" [(ngModel)]="customerData.JoiningDate" placeholder="JoiningDate" />
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label required">Adharcard Details </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+        <input class="form-control" [(ngModel)]="customerData.AdharcardDetails" placeholder="AdharcardDetails" />
+    </div>
+</div> 
+<div class="row">
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label">VoterID </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+        <input class="form-control required" [(ngModel)]="customerData.VoterID" placeholder="VoterID" />
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label required">ContactNumber1 </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+        <input class="form-control" type="number" [(ngModel)]="customerData.ContactNumber1" placeholder="ContactNumber1" />
+    </div>
+</div>  
+<div class="row">
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label">ContactNumber2 </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+        <input class="form-control" type="number" [(ngModel)]="customerData.ContactNumber2" placeholder="ContactNumber2" />
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label">ContactNumber3 </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+        <input class="form-control" type="number" [(ngModel)]="customerData.ContactNumber3" placeholder="ContactNumber3" />
+    </div>
+</div> 
+
+<div class="row">
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label">PermanentAddressLine1 </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+        <input class="form-control required" [(ngModel)]="customerData.PermanentAddressLine1" placeholder="PermanentAddressLine1" />
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label">TemporaryAddressLine1 </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+        <input class="form-control" [(ngModel)]="customerData.TemporaryAddressLine1" placeholder="TemporaryAddressLine1" />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label">PermanentAddressLine2 </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+        <input class="form-control" [(ngModel)]="customerData.PermanentAddressLine2" placeholder="PermanentAddressLine2" />
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label">TemporaryAddressLine2 </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+        <input class="form-control" [(ngModel)]="customerData.TemporaryAddressLine2" placeholder="TemporaryAddressLine2" />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label">PermanentCity </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+        <input class="form-control" [(ngModel)]="customerData.PermanentCity" placeholder="PermanentCity" />
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label">TemporaryCity </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+        <input class="form-control" [(ngModel)]="customerData.TemporaryCity" placeholder="TemporaryCity" />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label">PermanentPinCode </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+        <input class="form-control" type="number" [(ngModel)]="customerData.PermanentPinCode" placeholder="PermanentPinCode" />
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label">TemporaryPinCode </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+        <input class="form-control" type="number" [(ngModel)]="customerData.TemporaryPinCode" placeholder="TemporaryPinCode" />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label">Income Details </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+        <input class="form-control" [(ngModel)]="customerData.IncomeNoteOne" placeholder="Income Source" />
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label">Income Amount </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+        <input class="form-control" type="number" [(ngModel)]="customerData.IncomeAmountOne" placeholder="Income Amount" />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label">Expences Details </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+        <input class="form-control" type="number" [(ngModel)]="customerData.IncomeNoteTwo" placeholder="Expences Details" />
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label">Expences Amount </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+        <input class="form-control" type="number" [(ngModel)]="customerData.IncomeAmountTwo" (blur)="calculateSuplusAmount()" placeholder="Expence Amount" />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label">Surplus Details </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+        <input class="form-control" type="number" [(ngModel)]="customerData.IncomeNoteThree" placeholder="Surplus Details" />
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label">Surplus Amount </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+        <input class="form-control" [(ngModel)]="customerData.IncomeAmountThree" placeholder="Surplus Amount" />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label">Reg EnterBy </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+        <select (change)="customerData.RegStatusEnterdByID=($event.target.value)" [(ngModel)]="customerData.RegStatusEnterdByID">
+            <option value="0">--All--</option>
+            <option *ngFor="let useAcc of customerData.UserAccountList" value={{useAcc.UserAccountID}}>
+                {{useAcc.FullName}}
+            </option>
+        </select>
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label">RegEnterdByDate </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+        <input class="form-control" type="date" [(ngModel)]="customerData.RegStatusEnterdByDate" placeholder="RegStatusEnterdByDate" />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label">Reg Review By </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+        <select (change)="customerData.RegStatusReviewedByID=($event.target.value)" [(ngModel)]="customerData.RegStatusReviewedByID">
+            <option value="0">--All--</option>
+            <option *ngFor="let useAcc of customerData.UserAccountList" value={{useAcc.UserAccountID}}>
+                {{useAcc.FullName}}
+            </option>
+        </select>
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label">RegReviewedByDate </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+        <input class="form-control" type="date" [(ngModel)]="customerData.RegStatusReviewedByDate" placeholder="RegStatusReviewedByDate" />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label">Reg Approve By </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+        <select (change)="customerData.RegStatusApprovedByID=($event.target.value)" [(ngModel)]="customerData.RegStatusApprovedByID">
+            <option value="0">--All--</option>
+            <option *ngFor="let useAcc of customerData.UserAccountList" value={{useAcc.UserAccountID}}>
+                {{useAcc.FullName}}
+            </option>
+        </select>
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label">RegApprovedByDate </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+        <input class="form-control" type="date" [(ngModel)]="customerData.RegStatusApprovedByDate" placeholder="RegStatusApprovedByDate" />
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label">Entty Comments </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+        <input class="form-control"  [(ngModel)]="customerData.EntryComments" placeholder="Reg Enter Comments" />
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+            <b><label class="control-label">Other KYC </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+            <input class="form-control"  [(ngModel)]="customerData.KYCDetails" placeholder="Other KYC Documents" />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label">Review Comments </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+        <input class="form-control"  [(ngModel)]="customerData.ReviewComments"  placeholder="Reg Review Comments" />
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+            <b><label class="control-label"> Form Status</label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+            <select (change)="customerData.CustomerRegStatusID=($event.target.value)" [(ngModel)]="customerData.CustomerRegStatusID">
+                    <option value="0">--All--</option>
+                    <option *ngFor="let regStatus of customerData.CustomerRegStatusList" value={{regStatus.CustomerRegStatusID}}>
+                        {{regStatus.CustomerRegStatus}}
+                    </option>
+                </select>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label">Approve Comments </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+        <input class="form-control"  [(ngModel)]="customerData.ApproveComments"  placeholder="Reg Approve Comments" />
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+    </div>
+</div>
+
+
+
+    <button (click)="addCustomer()">{{customerData.ActionButtonName}}</button>
+</div>  

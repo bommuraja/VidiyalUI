@@ -1,0 +1,77 @@
+<div>
+        <div class="row">
+                <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+                    <b><label class="control-label">CenterID </label></b>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+                    <input class="form-control" [(ngModel)]="centerData.CenterID" placeholder="CenterID" disabled/>
+                </div>
+                <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+                    <b><label class="control-label">Location Name </label></b>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+                    <input class="form-control" [(ngModel)]="centerData.CenterName" placeholder="CenterName" disabled/>
+                </div>
+          </div>  
+          <div class="row">
+                  <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+                      <b><label class="control-label">CenterHeadName </label>  </b>            
+                  </div>
+                  <div class="col-sm-4 col-md-4 col-lg-4 form-group">             
+                      <input class="form-control" [(ngModel)]="centerData.CenterHeadName" placeholder="CenterHeadName" disabled/>
+                  </div>
+                  <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+                      <b><label class="control-label">CenterAddressLine1 </label></b>              
+                  </div>
+                  <div class="col-sm-4 col-md-4 col-lg-4 form-group">            
+                      <input class="form-control" [(ngModel)]="centerData.CenterAddressLine1" placeholder="CenterAddressLine1" disabled/>
+                  </div>
+          </div>
+          <div class="row">
+                    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+                            <b><label class="control-label">CenterAddressLine2 </label></b>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+                        <input class="form-control" [(ngModel)]="centerData.CenterAddressLine2" placeholder="CenterAddressLine2" disabled/>
+                    </div>
+                    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+                            <b><label class="control-label">City </label></b>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+                        <input class="form-control" [(ngModel)]="centerData.City" placeholder="City" disabled/>
+                    </div>
+          </div>
+          <div class="row">
+                      <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+                            <b><label class="control-label">CenterContactNumber</label></b>
+                      </div>
+                      <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+                          <input class="form-control" [(ngModel)]="centerData.CenterContactNumber" placeholder="CenterContactNumber" disabled/>
+                      </div>
+                      <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+                            <b><label class="control-label">CenterStartDate </label></b>
+                      </div>
+                      <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+                          <input type="date" class="form-control" [(ngModel)]="centerData.CenterStartDate" placeholder="CenterStartDate" disabled/>
+                      </div>
+          </div>
+          <div class="row">
+                        <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+                            <b><label class="control-label">CreatedDate</label></b>
+                        </div>
+                        <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+                            <input class="form-control" type="date" [(ngModel)]="centerData.CreatedDate" placeholder="CreatedDate" disabled/>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+                                <b><label class="control-label">CreatedBy </label></b>
+                        </div>
+                        <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+                            <input class="form-control" [(ngModel)]="centerData.CreatedBy" placeholder="CreatedBy" disabled/>
+                        </div>
+          </div>
+    
+    <button (click)="navigateToCenterList()">Back</button>
+    
+  </div>
+  
+  

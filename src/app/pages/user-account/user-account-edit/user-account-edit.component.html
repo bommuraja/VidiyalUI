@@ -1,0 +1,42 @@
+<div>
+  <h2>Update User Account</h2>
+  <div>
+    <input type="hidden" [(ngModel)]="userAccountData.UserAccountID"/>       
+    <label>RoleID:
+      <input [(ngModel)]="userAccountData.RoleID" placeholder="RoleID"/>
+    </label><br>
+    <label>UserAccountName:
+      <input [(ngModel)]="userAccountData.UserAccountName" placeholder="UserAccountName"/>
+    </label><br>
+    <label>ContactNumber:
+      <input [(ngModel)]="userAccountData.ContactNumber" placeholder="ContactNumber"/>
+    </label><br>
+    <label>UserName:
+      <input [(ngModel)]="userAccountData.UserName" placeholder="UserName"/>
+    </label><br>
+    <label>Password:
+      <input [(ngModel)]="userAccountData.Password" placeholder="Password"/>
+    </label><br>
+    <label>CreatedDate:
+      <input [(ngModel)]="userAccountData.CreatedDate" placeholder="CreatedDate"/>
+    </label><br>
+    <label>CreatedBy:
+      <input [(ngModel)]="userAccountData.CreatedBy" placeholder="CreatedBy"/>
+    </label><br>
+    <label>LastModifiedDate:
+      <input [(ngModel)]="userAccountData.LastModifiedDate" placeholder="LastModifiedDate"/>
+    </label><br>
+    <label>LastModifiedBy:
+      <input [(ngModel)]="userAccountData.LastModifiedBy" placeholder="LastModifiedBy"/>
+    </label><br>
+    <label>EMailAddress:
+      <input [(ngModel)]="userAccountData.EMailAddress" placeholder="EMailAddress"/>
+    </label><br>
+    <label>ContactAddress:
+      <input [(ngModel)]="userAccountData.ContactAddress" placeholder="ContactAddress"/>
+    </label><br>
+    
+  </div>
+  <button (click)="updateUserAccount()">Update</button>
+</div>
+

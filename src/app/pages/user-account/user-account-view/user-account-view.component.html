@@ -1,0 +1,42 @@
+<div>
+  <h2>View User Account</h2>
+  <div>
+    <input type="hidden" [(ngModel)]="userAccountData.UserAccountID"/>       
+    <label>RoleID:
+      <input [(ngModel)]="userAccountData.RoleID" placeholder="RoleID" disabled/>
+    </label><br>
+    <label>UserAccountName:
+      <input [(ngModel)]="userAccountData.UserAccountName" placeholder="UserAccountName" disabled/>
+    </label><br>
+    <label>ContactNumber:
+      <input [(ngModel)]="userAccountData.ContactNumber" placeholder="ContactNumber" disabled/>
+    </label><br>
+    <label>UserName:
+      <input [(ngModel)]="userAccountData.UserName" placeholder="UserName" disabled/>
+    </label><br>
+    <label>Password:
+      <input [(ngModel)]="userAccountData.Password" placeholder="Password" disabled/>
+    </label><br>
+    <label>CreatedDate:
+      <input [(ngModel)]="userAccountData.CreatedDate" placeholder="CreatedDate" disabled/>
+    </label><br>
+    <label>CreatedBy:
+      <input [(ngModel)]="userAccountData.CreatedBy" placeholder="CreatedBy" disabled/>
+    </label><br>
+    <label>LastModifiedDate:
+      <input [(ngModel)]="userAccountData.LastModifiedDate" placeholder="LastModifiedDate" disabled/>
+    </label><br>
+    <label>LastModifiedBy:
+      <input [(ngModel)]="userAccountData.LastModifiedBy" placeholder="LastModifiedBy" disabled/>
+    </label><br>
+    <label>EMailAddress:
+      <input [(ngModel)]="userAccountData.EMailAddress" placeholder="EMailAddress" disabled/>
+    </label><br>
+    <label>ContactAddress:
+      <input [(ngModel)]="userAccountData.ContactAddress" placeholder="ContactAddress" disabled/>
+    </label><br>
+    
+  </div>
+  <button (click)="navigateToUserAccountList()">Back</button>
+</div>
+

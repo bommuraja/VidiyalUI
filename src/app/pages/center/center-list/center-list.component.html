@@ -1,0 +1,38 @@
+<div>
+  <button (click)="add()">
+    Add New 
+  </button>
+</div>  
+
+<table class="table table-bordered">
+  <thead>    
+        <tr>
+            <th scope="col">CenterID</th>
+            <th scope="col">CenterName</th>
+            <th scope="col">CenterHeadName</th>
+            <th scope="col">Actions</th>            
+          </tr>
+  </thead>
+  
+  <tbody>
+     
+    <tr *ngFor="let center of centerList; let i=index;">
+      <th scope="row">{{center.CenterID}}</th>
+      <td>{{center.CenterName}}</td>
+      <td>{{center.CenterHeadName}}</td>
+      <td>          
+        <a routerLink="/pages/center/center-add/{{center.CenterID}}/EditPage">
+          Edit
+        </a>
+        <a routerLink="/pages/center/center-add/{{center.CenterID}}/ViewPage">
+          View
+        </a>
+        <a routerLink="/pages/center/center-add/{{center.CenterID}}/DeletePage">
+          Delete
+        </a>
+      </td>
+    </tr>
+   
+  </tbody>
+</table>
+

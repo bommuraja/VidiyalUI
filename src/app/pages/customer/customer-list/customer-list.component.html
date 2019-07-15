@@ -1,0 +1,35 @@
+<div>
+  <button (click)="add()">
+    Add New 
+  </button>
+</div>  
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">CustomerNumber</th>
+      <th scope="col">CustomerName</th>     
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let cust of CustomerList; let i=index;">
+    <tr>
+      <th scope="row">{{i+1}}</th>      
+      <td>{{cust.CustomerID}}</td>
+      <td>{{cust.CustomerName}}</td>       
+      <td>          
+        <a routerLink="/pages/customer/customer-add/{{cust.CustomerID}}/EditPage">
+          Edit
+        </a>
+        <a routerLink="/pages/customer/customer-add/{{cust.CustomerID}}/ViewPage">
+          View
+        </a>
+        <a routerLink="/pages/customer/customer-add/{{cust.CustomerID}}/DeletePage">
+          Delete
+        </a>
+      </td>
+    </tr>
+   
+  </tbody>
+</table>
+
